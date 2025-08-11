@@ -19,7 +19,7 @@ html,body{
     padding: 20px;
     background-color: whitesmoke;
     position: fixed;
-    
+    z-index:999; 
 }
   .nav-links {
     list-style: none;
@@ -503,6 +503,7 @@ button {
 }
 
 /* Additional styles for the about section */
+
 
 
 
