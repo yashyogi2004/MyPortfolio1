@@ -86,3 +86,7 @@ menuIcon.addEventListener('click', () => {
     }
 });
 
+const Button = document.querySelector('.hero-content button');
+Button.addEventListener('click', () => {
+    window.location.href = 'yashresume.pdf';
+});
