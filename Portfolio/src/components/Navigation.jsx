@@ -23,7 +23,7 @@ const Navigation = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
-            Yash Yogi
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNdB9czzh1-qUNDPCJGDHnAT3l_FH63ePBLw&s" alt="Yash Yogi" className="w-12 h-12 rounded-full" />
           </motion.a>
           <div className="hidden md:flex space-x-8">
             {['Home', 'About', 'Skills', 'Projects', 'Experience', 'Education', 'Contact'].map((item, index) => (

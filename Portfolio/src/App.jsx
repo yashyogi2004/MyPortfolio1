@@ -11,6 +11,7 @@ import Contact from './components/Contact';
 const App = () => {
   return (
     <div className="font-sans">
+     
       <Navigation />
       <Hero />
       <About />

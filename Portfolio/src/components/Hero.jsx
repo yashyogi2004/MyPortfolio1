@@ -5,8 +5,9 @@ import Scene3D from './Scene3D';
 const Hero = () => {
   return (
     <section id="hero" className="relative h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 to-purple-900 text-white overflow-hidden">
-      <Scene3D />
-      <div className="relative z-10 text-center">
+       <video src="/3129977-uhd_3840_2160_30fps.mp4" autoPlay loop muted className="absolute top-0 left-0 w-full h-full object-cover z-0"></video>
+      <Scene3D /> 
+      <div className="relative z-10 text-center ">
         <motion.h1
           className="text-5xl md:text-7xl font-bold mb-4"
           initial={{ opacity: 0, y: 50 }}
