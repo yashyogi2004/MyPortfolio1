@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Mail, Linkedin, Github } from 'lucide-react';
 
 const Contact = () => {
   const containerVariants = {
@@ -53,7 +54,7 @@ const Contact = () => {
               whileHover={{ scale: 1.2, rotate: 5 }}
               whileTap={{ scale: 0.9 }}
             >
-              Email
+              <Mail />
             </motion.a>
             <motion.a
               href="https://www.linkedin.com/in/yash-yogi-b72a52257/"
@@ -63,7 +64,7 @@ const Contact = () => {
               whileHover={{ scale: 1.2, rotate: -5 }}
               whileTap={{ scale: 0.9 }}
             >
-              LinkedIn
+              <Linkedin />
             </motion.a>
             <motion.a
               href="https://github.com/yashyogi2004"
@@ -73,7 +74,7 @@ const Contact = () => {
               whileHover={{ scale: 1.2, rotate: 5 }}
               whileTap={{ scale: 0.9 }}
             >
-              GitHub
+              <Github />
             </motion.a>
             <motion.a
               href="https://leetcode.com/Yashyog_21"
@@ -83,7 +84,8 @@ const Contact = () => {
               whileHover={{ scale: 1.2, rotate: 5 }}
               whileTap={{ scale: 0.9 }}
             >
-              Leetcode
+              {/* <FaLeetcode /> */}
+              <img src="/icons8-leetcode-24.png" alt="leetcode" className="w-6 h-6 " />
             </motion.a>
           </motion.div>
         </motion.div>

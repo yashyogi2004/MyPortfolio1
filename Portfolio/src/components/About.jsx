@@ -33,6 +33,9 @@ const About = () => {
         >
           About Me
         </motion.h2>
+         <div className=" flex justify-center mt-12">
+          <img src="https://media.licdn.com/dms/image/v2/D5635AQGSCS3FiWCkvw/profile-framedphoto-shrink_400_400/B56Zm.DpWXJwAc-/0/1759830251261?e=1766761200&v=beta&t=QkkIiASD4rCu0iPS6Ah9rSEbKPt_-zaabpg9PXNMVcQ" alt="Profile Image" className="w-48 h-48 rounded-full object-cover border-4 border-blue-500" />
+        </div>
         <motion.div
           className="max-w-3xl mx-auto text-center"
           variants={itemVariants}
@@ -56,6 +59,7 @@ const About = () => {
             and collaborate on exciting projects.
           </motion.p>
         </motion.div>
+       
       </div>
     </motion.section>
   );
