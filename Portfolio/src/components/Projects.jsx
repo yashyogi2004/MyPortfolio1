@@ -7,8 +7,8 @@ const Projects = () => {
       title: 'Personal Portfolio Website',
       description: 'A responsive personal portfolio website built with React and Tailwind CSS to showcase my projects and skills.',
       technologies: ['React', 'Tailwind CSS', 'Framer Motion'],
-      github: 'https://yashyogi2004.github.io/MyPortfolio1/',
-      demo: 'https://yashyogi2004.github.io/MyPortfolio1/'
+      github: 'https://yashyogi2004/MyPortfolio1/',
+      demo: 'https://my-portfolio1-one-orpin.vercel.app/'
     },
     {
       title: 'Employee Management System',
@@ -118,5 +118,6 @@ const Projects = () => {
     </motion.section>
   );
 };
+
 
 export default Projects;
