@@ -1,7 +1,7 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 
-const Skills = () => {
+const Skills = ({ sectionId = 'skills' }) => {
   const skills = [
     { name: 'JavaScript', level: 90 },
     { name: 'Python', level: 85 },
@@ -29,8 +29,8 @@ const Skills = () => {
   };
 
   return (
-    <motion.section
-      id="skills"
+    <Motion.section
+      id={sectionId}
       className="py-20 bg-gray-900 text-gray-200"
       initial="hidden"
       whileInView="visible"
@@ -38,18 +38,18 @@ const Skills = () => {
       variants={containerVariants}
     >
       <div className="container mx-auto px-4">
-        <motion.h2
+        <Motion.h2
           className="text-4xl font-bold text-center mb-12"
           variants={itemVariants}
         >
           Skills
-        </motion.h2>
-        <motion.div
+        </Motion.h2>
+        <Motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
           variants={containerVariants}
         >
           {skills.map((skill, index) => (
-            <motion.div
+            <Motion.div
               key={index}
               className="text-center"
               variants={itemVariants}
@@ -58,20 +58,20 @@ const Skills = () => {
             >
               <h3 className="text-xl font-semibold mb-4">{skill.name}</h3>
               <div className="w-full bg-gray-700 rounded-full h-4 mb-2">
-                <motion.div
+                <Motion.div
                   className="bg-blue-500 h-4 rounded-full"
                   initial={{ width: 0 }}
                   whileInView={{ width: `${skill.level}%` }}
                   viewport={{ once: true }}
                   transition={{ duration: 1.5, delay: index * 0.1 }}
-                ></motion.div>
+                ></Motion.div>
               </div>
               <p className="text-sm text-gray-400">{skill.level}%</p>
-            </motion.div>
+            </Motion.div>
           ))}
-        </motion.div>
+        </Motion.div>
       </div>
-    </motion.section>
+    </Motion.section>
   );
 };
 

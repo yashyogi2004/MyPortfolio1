@@ -1,7 +1,7 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 
-const Education = () => {
+const Education = ({ sectionId = 'education' }) => {
   const education = [
     {
       degree: 'Bachelor of Science in Computer Science',
@@ -35,8 +35,8 @@ const Education = () => {
   };
 
   return (
-    <motion.section
-      id="education"
+    <Motion.section
+      id={sectionId}
       className="py-20 bg-gray-800 text-gray-200"
       initial="hidden"
       whileInView="visible"
@@ -44,18 +44,18 @@ const Education = () => {
       variants={containerVariants}
     >
       <div className="container mx-auto px-4">
-        <motion.h2
+        <Motion.h2
           className="text-4xl font-bold text-center mb-12"
           variants={itemVariants}
         >
           Education
-        </motion.h2>
-        <motion.div
+        </Motion.h2>
+        <Motion.div
           className="max-w-4xl mx-auto"
           variants={containerVariants}
         >
           {education.map((edu, index) => (
-            <motion.div
+            <Motion.div
               key={index}
               className="mb-8 bg-gray-900 rounded-lg shadow-lg p-6 border border-gray-700"
               variants={itemVariants}
@@ -66,11 +66,11 @@ const Education = () => {
               <p className="text-blue-400 font-medium">{edu.institution}</p>
               <p className="text-gray-400 mb-2">{edu.period} | GPA: {edu.gpa}</p>
               <p className="text-gray-300">{edu.description}</p>
-            </motion.div>
+            </Motion.div>
           ))}
-        </motion.div>
+        </Motion.div>
       </div>
-    </motion.section>
+    </Motion.section>
   );
 };
 

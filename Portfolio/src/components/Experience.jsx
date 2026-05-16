@@ -1,7 +1,7 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 
-const Experience = () => {
+const Experience = ({ sectionId = 'experience' }) => {
   const experiences = [
     {
       title: 'Software Engineering Intern',
@@ -39,8 +39,8 @@ const Experience = () => {
   };
 
   return (
-    <motion.section
-      id="experience"
+    <Motion.section
+      id={sectionId}
       className="py-20 bg-gray-900 text-gray-200"
       initial="hidden"
       whileInView="visible"
@@ -48,18 +48,18 @@ const Experience = () => {
       variants={containerVariants}
     >
       <div className="container mx-auto px-4">
-        <motion.h2
+        <Motion.h2
           className="text-4xl font-bold text-center mb-12"
           variants={itemVariants}
         >
           Experience
-        </motion.h2>
-        <motion.div
+        </Motion.h2>
+        <Motion.div
           className="max-w-4xl mx-auto"
           variants={containerVariants}
         >
           {experiences.map((exp, index) => (
-            <motion.div
+            <Motion.div
               key={index}
               className="mb-8 border-l-4 border-blue-500 pl-8"
               variants={itemVariants}
@@ -70,11 +70,11 @@ const Experience = () => {
               <p className="text-blue-400 font-medium">{exp.company}</p>
               <p className="text-gray-400 mb-2">{exp.period}</p>
               <p className="text-gray-300">{exp.description}</p>
-            </motion.div>
+            </Motion.div>
           ))}
-        </motion.div>
+        </Motion.div>
       </div>
-    </motion.section>
+    </Motion.section>
   );
 };
 

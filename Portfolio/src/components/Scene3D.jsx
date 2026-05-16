@@ -13,7 +13,7 @@ const FloatingGeometry = () => {
   return (
     <group ref={meshRef}>
       <Float speed={2} rotationIntensity={1} floatIntensity={2}>
-        <Sphere args={[1, 32, 32]} position={[-3, 0, 0]}>
+        <Sphere args={[1, 16, 16]} position={[-3, 0, 0]}>
           <meshStandardMaterial color="#3b82f6" wireframe />
         </Sphere>
       </Float>
@@ -23,7 +23,7 @@ const FloatingGeometry = () => {
         </Box>
       </Float>
       <Float speed={2.5} rotationIntensity={1.5} floatIntensity={1}>
-        <Torus args={[1, 0.4, 16, 32]} position={[0, -2, 0]}>
+        <Torus args={[1, 0.4, 8, 24]} position={[0, -2, 0]}>
           <meshStandardMaterial color="#06b6d4" wireframe />
         </Torus>
       </Float>
@@ -34,7 +34,11 @@ const FloatingGeometry = () => {
 const Scene3D = () => {
   return (
     <div className="absolute inset-0 z-0">
-      <Canvas camera={{ position: [0, 0, 5], fov: 75 }}>
+      <Canvas
+        camera={{ position: [0, 0, 5], fov: 75 }}
+        dpr={[1, 1.5]}
+        gl={{ antialias: false, powerPreference: 'low-power' }}
+      >
         <ambientLight intensity={0.5} />
         <pointLight position={[10, 10, 10]} />
         <FloatingGeometry />
